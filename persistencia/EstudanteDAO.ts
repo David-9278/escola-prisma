@@ -3,7 +3,7 @@ import { prisma } from '../config/database.js';
 export class EstudanteDAO {
   async listarTodos() {
     return prisma.estudante.findMany({
-      include: { turma: true }   // traz a turma a que pertence
+      include: { turma: true }
     });
   }
 
